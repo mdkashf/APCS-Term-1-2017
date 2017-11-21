@@ -1,0 +1,72 @@
+//MD MASHRAFI
+//APCS1 pd 1
+//HW 36 -- Be Rational
+//2017-11-19   
+
+public class Rational {
+    int num;
+    int dem;
+
+    public Rational(){
+	Rational Rational = new Rational( 0 , 1);
+    }
+
+    public Rational(int n, int d){
+	if (d == 0 ){ // if denominator input leads to undefined
+	    System.out.println( "Invalid rational"); // return error msg
+	} else {
+	    num = n; // set values for the instance variables
+	    dem = d;
+	}
+    }
+
+    public String toString(){
+	return num + "/" + dem; // return String representation of Fraction
+    }
+
+    public double floatValue(){
+	return ((double)num) /((double) dem); // return the value of the fraction
+    }
+
+    public int toNum(){
+	return num; // returns value of numerator
+    }
+
+    public int toDem(){
+	return dem; // return value of denominator
+    }
+    
+    public void multiply(Rational a){
+	num = num * a.toNum(); // multiplies own numerator with input numerator
+	dem = dem * a.toDem(); // multiplies own denominator with input denominator
+    }
+
+    public void divide(Rational a){
+	num = num / a.toNum(); // divides own numerator with input numerator
+	dem = dem / a.toDem(); // divides own denominator with input denominator
+    } 
+
+ 
+
+    public static void main (String [] args ){
+
+	//tests
+	//Initializaton
+	Rational r = new Rational(2,3);
+	Rational s = new Rational(1,2);
+	System.out.println(s.toString() + " : Original s");
+	System.out.println(r.toString() + " : Original r");
+
+	//Multiply
+	r.multiply(s);
+        System.out.println(r.toString() + " : New r when multiplied by s");
+
+	//Divide
+	r.divide(s);
+	System.out.println(r.toString() + " : New r when divided by s");
+
+	//Float Value
+	System.out.println(r.floatValue() + " : Float value of r");
+    }
+    
+}

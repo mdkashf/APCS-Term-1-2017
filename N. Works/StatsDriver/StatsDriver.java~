@@ -1,0 +1,12 @@
+public class StatsDriver{
+    public static void main(String[] args){
+	System.out.println(Stats.mean(10, 90));
+	System.out.println(Stats.mean(12.231,213.1));
+	System.out.println(Stats.max(10, 12));
+	System.out.println(Stats.max(10.123, 12.12321));
+	System.out.println(Stats.geoMean(2, 18));
+	System.out.println(Stats.geoMean(12.5, 10.5));
+	System.out.println(Stats.mean(6,-6));
+
+    }
+}

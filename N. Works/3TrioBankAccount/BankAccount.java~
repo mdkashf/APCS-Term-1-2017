@@ -1,0 +1,19 @@
+public BankAccount {
+	public String acctHolderName;
+	private String acctPassword;
+	public short acctPIN;
+	public int acctNumber;
+	public float acctBalance;
+	
+	public BankAccount(){
+	    acctHolderName = "TwentyOne Savage";
+	    acctNumber = int 012345678;
+	    acctBalance = float  50.0;
+	    acctPIN = short 1234;
+	    acctpassword = "lettuce"
+	}
+
+	public BankAccount(String name, String pass){	   	   
+	}
+	
+}
